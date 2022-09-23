@@ -6,7 +6,6 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import ucne.edu.parcial1_luis.UserInterface.Parcial.List.ParcialListScreen
 import ucne.edu.parcial1_luis.UserInterface.Parcial.Screen.RegistroParcialScreen
-import ucne.edu.parcial1_luis.UserInterface.Parcial.Screen.ParcialListScreen
 
 @Composable
 fun MyApp() {
