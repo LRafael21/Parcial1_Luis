@@ -17,7 +17,7 @@ fun MyApp() {
     ) {
         composable(Screen.parciallistscreen.route) {
             ParcialListScreen(
-                OnClickParcial = { navController.navigate(Screen.parciallistscreen.route) }
+                OnClickParcial = { navController.navigate(Screen.registroparcialscreen.route) }
 
             )
         }
@@ -26,7 +26,7 @@ fun MyApp() {
         }
         composable(Screen.parciallistscreen.route) {
             ParcialListScreen(
-                OnClickParcial = { navController.navigate(Screen.parciallistscreen.route) }
+                OnClickParcial = { navController.navigate(Screen.registroparcialscreen.route) }
             )
         }
         composable(Screen.registroparcialscreen.route) {

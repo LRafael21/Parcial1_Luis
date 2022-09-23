@@ -37,6 +37,7 @@ fun RegistroParcialScreen(
             ,
             onClick = {
                 // viewModel.Guadar()
+                onNavigateBack()
 
             }) {
             Text(text = "Guardame")
