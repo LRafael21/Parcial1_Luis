@@ -1,11 +1,7 @@
-package ucne.edu.parcial1_luis.util
-
-sealed class Screen(val route: String){
+package ucne.edu.parcial1_luis.UserInterface.Navigation
 
     sealed class Screen (val route : String){
 
         object registroparcialscreen : Screen("RegistroParcialScreen")
         object parciallistscreen : Screen("ParcialListScreen")
     }
-
-}

@@ -20,14 +20,14 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import ucne.edu.parcial1_luis.Entity.Usuario
 
 @Composable
-fun OcupacionListScreen(
-    OnClickOcupacion: () -> Unit,
+fun ParcialListScreen(
+    OnClickParcial: () -> Unit,
     viewModel: ParcialListViewModel = hiltViewModel()
 ) {
 
     Scaffold(
         floatingActionButton = {
-            FloatingActionButton(onClick = OnClickOcupacion) {
+            FloatingActionButton(onClick = OnClickParcial) {
                 Icon(imageVector = Icons.Default.Add, contentDescription = "Agregar Entidad")
             }
 
