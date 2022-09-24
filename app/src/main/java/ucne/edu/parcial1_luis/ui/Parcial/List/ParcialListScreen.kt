@@ -1,4 +1,4 @@
-package ucne.edu.parcial1_luis.UserInterface.Parcial.List
+package ucne.edu.parcial1_luis.ui.Parcial.List
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -17,7 +17,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
-import ucne.edu.parcial1_luis.Entity.Usuario
+import ucne.edu.parcial1_luis.data.entity.Usuario
 
 @Composable
 fun ParcialListScreen(

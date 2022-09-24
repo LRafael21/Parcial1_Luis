@@ -1,4 +1,4 @@
-package ucne.edu.parcial1_luis.UserInterface.Navigation
+package ucne.edu.parcial1_luis.ui.Navigation
 
     sealed class Screen (val route : String){
 

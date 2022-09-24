@@ -1,4 +1,4 @@
-package ucne.edu.parcial1_luis.UserInterface.Parcial.Screen
+package ucne.edu.parcial1_luis.ui.Parcial.Screen
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -7,7 +7,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
-import ucne.edu.parcial1_luis.Entity.Usuario
 import javax.inject.Inject
 
 @HiltViewModel

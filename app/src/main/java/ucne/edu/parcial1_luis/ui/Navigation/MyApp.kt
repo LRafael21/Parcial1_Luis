@@ -1,11 +1,11 @@
-package ucne.edu.parcial1_luis.UserInterface.Navigation
+package ucne.edu.parcial1_luis.ui.Navigation
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import ucne.edu.parcial1_luis.UserInterface.Parcial.List.ParcialListScreen
-import ucne.edu.parcial1_luis.UserInterface.Parcial.Screen.RegistroParcialScreen
+import ucne.edu.parcial1_luis.ui.Parcial.List.ParcialListScreen
+import ucne.edu.parcial1_luis.ui.Parcial.Screen.RegistroParcialScreen
 
 @Composable
 fun MyApp() {

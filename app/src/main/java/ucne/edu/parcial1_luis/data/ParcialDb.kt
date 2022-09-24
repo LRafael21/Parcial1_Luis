@@ -4,7 +4,7 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import ucne.edu.parcial1_luis.Entity.Usuario
+import ucne.edu.parcial1_luis.data.entity.Usuario
 
 @Database(
     entities = [Usuario::class] ,

@@ -1,4 +1,4 @@
-package ucne.edu.parcial1_luis.Entity
+package ucne.edu.parcial1_luis.data.entity
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
