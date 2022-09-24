@@ -13,26 +13,4 @@ import ucne.edu.parcial1_luis.data.entity.Usuario
 )
 abstract class ParcialDb: RoomDatabase(){
 
-
-    companion object {
-        @Volatile
-        private var INSTANCE: ParcialDb? = null
-        fun getInstance(context: Context): ParcialDb {
-            synchronized(this) {
-                var instance = INSTANCE
-
-                if(instance == null) {
-                    instance = Room.databaseBuilder(
-                        context.applicationContext,
-                        ParcialDb::class.java,
-                        "Parcial.db"
-                    )
-                        .fallbackToDestructiveMigration()
-                        .build()
-                    INSTANCE = instance
-                }
-                return instance
-            }
-        }
-    }
 }
