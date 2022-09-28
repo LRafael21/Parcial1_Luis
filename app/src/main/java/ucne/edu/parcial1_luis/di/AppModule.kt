@@ -7,6 +7,7 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
+import ucne.edu.parcial1_luis.data.ArticuloDb
 import ucne.edu.parcial1_luis.data.ParcialDb
 import javax.inject.Singleton
 
@@ -15,11 +16,11 @@ import javax.inject.Singleton
 object AppModule {
     @Singleton
     @Provides
-    fun providesDataBase(@ApplicationContext context: Context): ParcialDb {
+    fun providesDataBase(@ApplicationContext context: Context): ArticuloDb {
         return Room.databaseBuilder(
             context,
-            ParcialDb::class.java,
-            "Parcial.db"
+            ArticuloDb::class.java,
+            "Articulo.db"
         ).fallbackToDestructiveMigration().build()
     }
 
