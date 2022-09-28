@@ -7,20 +7,29 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import ucne.edu.parcial1_luis.data.entity.Articulo
+import ucne.edu.parcial1_luis.repository.ArticulosRepository
 import javax.inject.Inject
 
 @HiltViewModel
 class ArticuloViewModel @Inject constructor(
-  //  val repository: ParcialRepository
+    val repository: ArticulosRepository
 ) : ViewModel() {
-    var plantilla1 by mutableStateOf("")
-    var plantilla2 by mutableStateOf("")
-    var plantilla3 by mutableStateOf("")
+    var descripcion by mutableStateOf("")
+    var marca by mutableStateOf("")
+    var existencia by mutableStateOf("")
 
 
 
     fun Guardar() {
         viewModelScope.launch {
+            repository.insert(
+                Articulo(
+                    descripcion = descripcion,
+                    marca = marca,
+                    existencia = existencia.toDouble()
+                )
+            )
         }
 
     }
