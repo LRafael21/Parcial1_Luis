@@ -18,11 +18,12 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import ucne.edu.parcial1_luis.data.entity.Articulo
+import ucne.edu.parcial1_luis.repository.ArticulosRepository
 
 @Composable
 fun ArticuloListScreen(
     OnClickArticulo: () -> Unit,
-    viewModel: ArticuloListViewModel = hiltViewModel()
+    viewModel: ArticuloListViewModel = hiltViewModel(),
 ) {
 
     Scaffold(
@@ -144,7 +145,7 @@ fun ArticuloRow(articulo: Articulo, viewModel: ArticuloListViewModel) {
             }
 
             IconButton(
-                onClick = {  }) {
+                onClick = { }) {
                 Icon(
                     imageVector = Icons.Outlined.Add, contentDescription = "noidea",
                     tint = Color.Blue,
