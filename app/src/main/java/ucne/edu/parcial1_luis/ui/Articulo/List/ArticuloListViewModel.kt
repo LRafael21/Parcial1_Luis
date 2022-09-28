@@ -9,7 +9,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import ucne.edu.parcial1_luis.data.entity.Articulo
-import ucne.edu.parcial1_luis.repository.articulosRepository
+import ucne.edu.parcial1_luis.repository.ArticulosRepository
 import javax.inject.Inject
 
 data class ArticuloListUIState(
@@ -19,7 +19,7 @@ data class ArticuloListUIState(
 
 @HiltViewModel
 class ArticuloListViewModel @Inject constructor(
-    val repository: articulosRepository
+    val repository: ArticulosRepository
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(ArticuloListUIState())

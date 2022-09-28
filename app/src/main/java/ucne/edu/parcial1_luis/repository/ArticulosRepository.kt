@@ -9,7 +9,7 @@ import ucne.edu.parcial1_luis.data.ArticuloDb
 import ucne.edu.parcial1_luis.data.entity.Articulo
 import javax.inject.Inject
 
-class articulosRepository @Inject constructor(
+class ArticulosRepository @Inject constructor(
     val db: ArticuloDb
 ) {
 
