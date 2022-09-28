@@ -1,4 +1,4 @@
-package ucne.edu.parcial1_luis.ui.Parcial.Screen
+package ucne.edu.parcial1_luis.ui.Articulo.Screen
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -10,7 +10,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class ParcialViewModel @Inject constructor(
+class ArticuloViewModel @Inject constructor(
   //  val repository: ParcialRepository
 ) : ViewModel() {
     var plantilla1 by mutableStateOf("")

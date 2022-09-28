@@ -1,4 +1,4 @@
-package ucne.edu.parcial1_luis.ui.Parcial.Screen
+package ucne.edu.parcial1_luis.ui.Articulo.Screen
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Button
@@ -13,7 +13,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 @Composable
 fun RegistroParcialScreen(
     onNavigateBack: () -> Unit,
-    viewModel: ParcialViewModel = hiltViewModel()
+    viewModel: ArticuloViewModel = hiltViewModel()
 ) {
     var context = LocalContext.current
 

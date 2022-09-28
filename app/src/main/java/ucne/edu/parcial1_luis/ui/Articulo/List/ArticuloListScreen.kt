@@ -1,4 +1,4 @@
-package ucne.edu.parcial1_luis.ui.Parcial.List
+package ucne.edu.parcial1_luis.ui.Articulo.List
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -20,15 +20,15 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import ucne.edu.parcial1_luis.data.entity.Articulo
 
 @Composable
-fun ParcialListScreen(
-    OnClickParcial: () -> Unit,
-    viewModel: ParcialListViewModel = hiltViewModel()
+fun ArticuloListScreen(
+    OnClickArticulo: () -> Unit,
+    viewModel: ArticuloListViewModel = hiltViewModel()
 ) {
 
     Scaffold(
         floatingActionButton = {
-            FloatingActionButton(onClick = OnClickParcial) {
-                Icon(imageVector = Icons.Default.Add, contentDescription = "Agregar Entidad")
+            FloatingActionButton(onClick = OnClickArticulo) {
+                Icon(imageVector = Icons.Default.Add, contentDescription = "Agregar Articulo")
             }
 
         },
@@ -41,8 +41,8 @@ fun ParcialListScreen(
                 .fillMaxWidth()
                 .padding(it)
         ) {
-            ParcialList(
-                usuario = uiState.usuario,
+            ArticuloList(
+                articulo = uiState.articulo,
                 modifier = Modifier
                     .fillMaxSize()
                     .padding(it)
@@ -56,13 +56,13 @@ fun ParcialListScreen(
 
 
 @Composable
-fun ParcialList(
-    usuario: List<Articulo>,
-    viewModel: ParcialListViewModel = hiltViewModel(),
+fun ArticuloList(
+    articulo: List<Articulo>,
+    viewModel: ArticuloListViewModel = hiltViewModel(),
     modifier: Modifier = Modifier,
 ) {
     TopAppBar(
-        title = { Text(text = "Lista de Entidad") },
+        title = { Text(text = "Lista de Articulos") },
         modifier = Modifier.padding(0.dp),
         actions = {}
     )
@@ -79,15 +79,15 @@ fun ParcialList(
     LazyColumn(
         modifier = modifier,
     ) {
-        items(usuario) { usuario ->
-            ParcialRow(usuario, viewModel)
+        items(articulo) { articulo ->
+            ArticuloRow(articulo, viewModel)
         }
     }
 
 }
 
 @Composable
-fun ParcialRow(usuario: Articulo, viewModel: ParcialListViewModel) {
+fun ArticuloRow(articulo: Articulo, viewModel: ArticuloListViewModel) {
     Column(
         modifier = Modifier
             .fillMaxWidth()
@@ -100,18 +100,29 @@ fun ParcialRow(usuario: Articulo, viewModel: ParcialListViewModel) {
                 textDecoration = TextDecoration.Underline
             )
             Text(
-                text = " ${usuario.plantilla1} "
+                text = " ${articulo.descripcion} "
             )
         }
         Spacer(modifier = Modifier.height(5.dp))
         Row() {
             Text(
-                text = "Salario: ",
+                text = "Marca: ",
                 fontWeight = FontWeight.Bold,
                 textDecoration = TextDecoration.Underline
             )
             Text(
-                text = " ${usuario.plantilla2} "
+                text = " ${articulo.marca} "
+            )
+        }
+        Spacer(modifier = Modifier.height(5.dp))
+        Row() {
+            Text(
+                text = "Existencia: ",
+                fontWeight = FontWeight.Bold,
+                textDecoration = TextDecoration.Underline
+            )
+            Text(
+                text = " ${articulo.existencia} "
             )
         }
 
