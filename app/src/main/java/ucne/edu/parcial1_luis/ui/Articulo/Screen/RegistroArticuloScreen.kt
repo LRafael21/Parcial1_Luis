@@ -29,14 +29,14 @@ fun RegistroArticuloScreen(
         if(viewModel.descripcion.isEmpty())
         {
             Toast.makeText(
-                context, "Campo descripcion vacio",Toast.LENGTH_LONG
+                context, "Campo Descripcion vacio",Toast.LENGTH_LONG
             ).show()
         }
 
         else if (viewModel.marca.isEmpty())
         {
             Toast.makeText(
-                context, "Campo marca vacio",Toast.LENGTH_LONG
+                context, "Campo Marca vacio",Toast.LENGTH_LONG
             ).show()
         }
         else if (viewModel.existencia.isEmpty())
@@ -45,10 +45,10 @@ fun RegistroArticuloScreen(
                 context, "Campo Existencia vacio",Toast.LENGTH_LONG
             ).show()
         }
-        else if (viewModel.existencia.toDouble() < 0)
+        else if (viewModel.existencia.toDouble() < 1)
         {
             Toast.makeText(
-                context, "Campo Existencia no puede tener un valor menor que 0",Toast.LENGTH_LONG
+                context, "Campo Existencia no puede tener un valor menor que 1",Toast.LENGTH_LONG
             ).show()
 
         }
@@ -60,7 +60,7 @@ fun RegistroArticuloScreen(
         }
         else{
             Toast.makeText(
-                context, "El campo existencia solo acepta numeros",Toast.LENGTH_LONG
+                context, "El campo Existencia solo acepta numeros",Toast.LENGTH_LONG
             ).show()
 
         }
@@ -101,7 +101,6 @@ fun RegistroArticuloScreen(
             modifier = Modifier.fillMaxWidth(),
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number)
         )
-
 
         Button(
             modifier = Modifier
