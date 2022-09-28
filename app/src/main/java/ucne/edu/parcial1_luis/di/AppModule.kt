@@ -8,7 +8,6 @@ import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import ucne.edu.parcial1_luis.data.ArticuloDb
-import ucne.edu.parcial1_luis.data.ParcialDb
 import javax.inject.Singleton
 
 @Module
