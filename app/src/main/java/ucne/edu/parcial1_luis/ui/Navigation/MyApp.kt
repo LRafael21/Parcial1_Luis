@@ -4,8 +4,8 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import ucne.edu.parcial1_luis.ui.Articulo.List.ParcialListScreen
-import ucne.edu.parcial1_luis.ui.Articulo.Screen.RegistroParcialScreen
+import ucne.edu.parcial1_luis.ui.Articulo.List.ArticuloListScreen
+import ucne.edu.parcial1_luis.ui.Articulo.Screen.RegistroArticuloScreen
 
 @Composable
 fun MyApp() {
@@ -13,24 +13,24 @@ fun MyApp() {
 
     NavHost(
         navController = navController,
-        startDestination = Screen.parciallistscreen.route
+        startDestination = Screen.articulolistscreen.route
     ) {
-        composable(Screen.parciallistscreen.route) {
-            ParcialListScreen(
-                OnClickParcial = { navController.navigate(Screen.registroparcialscreen.route) }
+        composable(Screen.articulolistscreen.route) {
+            ArticuloListScreen(
+                OnClickArticulo = { navController.navigate(Screen.registroarticuloscreen.route) }
 
             )
         }
-        composable(Screen.parciallistscreen.route) {
-            ParcialListScreen({ navController.navigateUp() })
+        composable(Screen.articulolistscreen.route) {
+            ArticuloListScreen({ navController.navigateUp() })
         }
-        composable(Screen.parciallistscreen.route) {
-            ParcialListScreen(
-                OnClickParcial = { navController.navigate(Screen.registroparcialscreen.route) }
+        composable(Screen.articulolistscreen.route) {
+            ArticuloListScreen(
+                OnClickArticulo = { navController.navigate(Screen.registroarticuloscreen.route) }
             )
         }
-        composable(Screen.registroparcialscreen.route) {
-            RegistroParcialScreen({ navController.navigateUp() })
+        composable(Screen.registroarticuloscreen.route) {
+            RegistroArticuloScreen({ navController.navigateUp() })
         }
 
     }
