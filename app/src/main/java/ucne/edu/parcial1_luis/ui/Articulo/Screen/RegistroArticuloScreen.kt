@@ -35,7 +35,7 @@ fun RegistroArticuloScreen(
                 context, "Campo marca vacio",Toast.LENGTH_LONG
             ).show()
         }
-        else if (viewModel.marca.isEmpty())
+        else if (viewModel.existencia.isEmpty())
         {
             Toast.makeText(
                 context, "Campo Existencia vacio",Toast.LENGTH_LONG
