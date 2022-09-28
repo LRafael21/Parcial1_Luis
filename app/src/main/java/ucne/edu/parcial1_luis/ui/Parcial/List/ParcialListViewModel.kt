@@ -5,11 +5,11 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
-import ucne.edu.parcial1_luis.data.entity.Usuario
+import ucne.edu.parcial1_luis.data.entity.Articulo
 import javax.inject.Inject
 
 data class ParcialListUIState(
-    val usuario: List<Usuario> = emptyList(),
+    val usuario: List<Articulo> = emptyList(),
 
     )
 

@@ -17,7 +17,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
-import ucne.edu.parcial1_luis.data.entity.Usuario
+import ucne.edu.parcial1_luis.data.entity.Articulo
 
 @Composable
 fun ParcialListScreen(
@@ -57,7 +57,7 @@ fun ParcialListScreen(
 
 @Composable
 fun ParcialList(
-    usuario: List<Usuario>,
+    usuario: List<Articulo>,
     viewModel: ParcialListViewModel = hiltViewModel(),
     modifier: Modifier = Modifier,
 ) {
@@ -87,7 +87,7 @@ fun ParcialList(
 }
 
 @Composable
-fun ParcialRow(usuario: Usuario, viewModel: ParcialListViewModel) {
+fun ParcialRow(usuario: Articulo, viewModel: ParcialListViewModel) {
     Column(
         modifier = Modifier
             .fillMaxWidth()
