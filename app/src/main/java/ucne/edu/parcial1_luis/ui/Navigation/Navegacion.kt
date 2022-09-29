@@ -8,7 +8,7 @@ import ucne.edu.parcial1_luis.ui.Articulo.List.ArticuloListScreen
 import ucne.edu.parcial1_luis.ui.Articulo.Screen.RegistroArticuloScreen
 
 @Composable
-fun MyApp() {
+fun Navegacion() {
     val navController = rememberNavController()
 
     NavHost(
