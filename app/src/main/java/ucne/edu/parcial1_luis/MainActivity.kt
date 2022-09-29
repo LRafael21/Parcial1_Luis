@@ -8,7 +8,7 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.ui.Modifier
 import dagger.hilt.android.AndroidEntryPoint
-import ucne.edu.parcial1_luis.ui.Navigation.MyApp
+import ucne.edu.parcial1_luis.ui.Navigation.Navegacion
 import ucne.edu.parcial1_luis.ui.theme.Parcial1_LuisTheme
 
 @AndroidEntryPoint
@@ -22,7 +22,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    MyApp()
+                    Navegacion()
                 }
             }
         }
