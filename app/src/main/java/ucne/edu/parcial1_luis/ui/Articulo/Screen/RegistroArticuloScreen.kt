@@ -1,6 +1,7 @@
 package ucne.edu.parcial1_luis.ui.Articulo.Screen
 
 import android.widget.Toast
+import androidx.compose.foundation.focusable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
@@ -11,6 +12,7 @@ import androidx.compose.material.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
@@ -24,43 +26,25 @@ fun RegistroArticuloScreen(
 ) {
     var context = LocalContext.current
 
-    fun validar()
-    {
-        if(viewModel.descripcion.isEmpty())
-        {
+    fun validar() {
+        if (viewModel.descripcion.isEmpty()) {
             Toast.makeText(
-                context, "Campo Descripcion vacio",Toast.LENGTH_LONG
+                context, "Campo Descripcion vacio", Toast.LENGTH_LONG
             ).show()
-        }
-
-        else if (viewModel.marca.isEmpty())
-        {
+        } else if (viewModel.marca.isEmpty()) {
             Toast.makeText(
-                context, "Campo Marca vacio",Toast.LENGTH_LONG
+                context, "Campo Marca vacio", Toast.LENGTH_LONG
             ).show()
-        }
-        else if (viewModel.existencia.isEmpty())
-        {
+        } else if (viewModel.existencia.isEmpty()) {
             Toast.makeText(
-                context, "Campo Existencia vacio",Toast.LENGTH_LONG
+                context, "Campo Existencia vacio", Toast.LENGTH_LONG
             ).show()
-        }
-        else if (viewModel.existencia.toDouble() < 1)
-        {
-            Toast.makeText(
-                context, "Campo Existencia no puede tener un valor menor que 1",Toast.LENGTH_LONG
-            ).show()
-
-        }
-
-        else if (viewModel.existencia.isDigitsOnly())
-        {
-           viewModel.Guardar()
+        } else if (viewModel.existencia.isDigitsOnly()) {
+            viewModel.Guardar()
             onNavigateBack()
-        }
-        else{
+        } else {
             Toast.makeText(
-                context, "El campo Existencia solo acepta numeros",Toast.LENGTH_LONG
+                context, "El campo Existencia solo acepta numeros", Toast.LENGTH_LONG
             ).show()
 
         }
@@ -83,8 +67,8 @@ fun RegistroArticuloScreen(
         OutlinedTextField(
             value = viewModel.descripcion,
             onValueChange = { viewModel.descripcion = it },
-            label = { Text(text = "Descripcion") },
-            modifier = Modifier.fillMaxWidth()
+            label = { Text(text = "Descripción") },
+            modifier = Modifier.fillMaxWidth(),
         )
 
         OutlinedTextField(
@@ -107,7 +91,7 @@ fun RegistroArticuloScreen(
                 .fillMaxWidth()
                 .padding(10.dp),
             onClick = {
-               validar()
+                validar()
 
             }) {
             Text(text = "Guardar Articulo")
